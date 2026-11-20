@@ -193,3 +193,387 @@
     right: 0;
     font-size: 35px;
 }
+
+/* =========================
+   MY LEARNING
+========================= */
+
+.learningHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  gap: 20px;
+}
+
+.learningHeader h1 {
+  margin: 0 0 6px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #2f2345;
+}
+
+.learningHeader p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.courseCount {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #eee6f8;
+  color: #6f42a5;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+/* =========================
+   COURSE GRID
+========================= */
+
+.learningGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+
+/* =========================
+   COURSE CARD
+========================= */
+
+.learningCard {
+  width: 100%;
+  max-width: 390px;
+  background: #ffffff;
+  border: 1px solid #e9e6ed;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.25s ease;
+}
+
+.learningCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================
+   COURSE IMAGE
+========================= */
+
+.learningImage {
+  width: 100%;
+  height: 155px;
+  position: relative;
+  overflow: hidden;
+  background: #eee;
+}
+
+.learningImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* =========================
+   LEVEL BADGE
+========================= */
+
+.learningLevel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background: #ffffff;
+  color: #6f42a5;
+
+  padding: 5px 9px;
+  border-radius: 6px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   CARD BODY
+========================= */
+
+.learningCardBody {
+  padding: 17px;
+}
+
+.learningCategory {
+  display: inline-block;
+
+  color: #6f42a5;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  margin-bottom: 7px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.learningCardBody h2 {
+  margin: 0 0 18px;
+
+  color: #2f2345;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  min-height: 48px;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 7px;
+
+  font-size: 12px;
+  color: #777;
+}
+
+.progressHeader strong {
+  color: #6f42a5;
+  font-weight: 600;
+}
+
+.progressBar {
+  width: 100%;
+  height: 6px;
+
+  background: #e9e5ef;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  margin-bottom: 17px;
+}
+
+.progressFill {
+  height: 100%;
+
+  background: #6f42a5;
+
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+
+/* =========================
+   CONTINUE BUTTON
+========================= */
+
+.continueButton {
+  width: 100%;
+
+  border: none;
+
+  background: #6f42a5;
+  color: #ffffff;
+
+  padding: 11px 14px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  transition: all 0.2s ease;
+}
+
+.continueButton:hover {
+  background: #593487;
+  transform: translateY(-1px);
+}
+
+.continueButton:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.learningLoading {
+  padding: 50px;
+
+  text-align: center;
+
+  color: #777;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.emptyLearning {
+  background: #ffffff;
+
+  border: 1px solid #eee;
+
+  border-radius: 12px;
+
+  padding: 55px 25px;
+
+  text-align: center;
+}
+
+.emptyLearning svg {
+  font-size: 42px;
+
+  color: #6f42a5;
+
+  margin-bottom: 14px;
+}
+
+.emptyLearning h2 {
+  margin: 0 0 7px;
+
+  color: #2f2345;
+
+  font-size: 20px;
+}
+
+.emptyLearning p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+  .learningGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .learningCard {
+    max-width: 430px;
+  }
+}
+
+@media (max-width: 600px) {
+  .learningHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .learningHeader h1 {
+    font-size: 23px;
+  }
+
+  .learningImage {
+    height: 170px;
+  }
+
+  .learningCard {
+    max-width: 100%;
+  }
+}
+/* =========================
+   PROFILE MENU
+========================= */
+
+.profileMenu {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.profileMenuItem {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 16px;
+
+  text-decoration: none;
+
+  color: #4b4355;
+  background: #ffffff;
+
+  border: 1px solid #eee8f4;
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.profileMenuIcon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eee6f8;
+  color: #6f42a5;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+
+  flex-shrink: 0;
+}
+
+.profileMenuItem:hover {
+  background: #f7f2fc;
+  color: #6f42a5;
+  border-color: #dfd0ed;
+  transform: translateX(2px);
+}
+
+.profileMenuItem:hover .profileMenuIcon {
+  background: #6f42a5;
+  color: #ffffff;
+}

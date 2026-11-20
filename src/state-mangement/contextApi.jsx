@@ -16,6 +16,10 @@ import {
 import {
   fetchAllCourses,
   fetchAllLmsCourses,
+  fetchLmsCategories,
+  searchLmsCourses,
+  fetchLmsHome,
+  createLmsCategory,
   createCourse,
   fetchAllCoursesForAdmin,
   updateCourse,
@@ -187,6 +191,26 @@ export const AuthProvider = ({ children }) => {
   return data;
 };
 
+const getLmsCategoriesApi = async () => {
+  let data = await fetchLmsCategories();
+  return data;
+};
+
+const searchLmsCoursesApi = async (query) => {
+  const data = await searchLmsCourses(query);
+  return data;
+};
+
+const getLmsHomeApi = async () => {
+  const data = await fetchLmsHome();
+  return data;
+};
+
+const createLmsCategoryApi = async (categoryData) => {
+  const data = await createLmsCategory(categoryData);
+  return data;
+};
+
   const createCourseApi = async (payload) => {
     let data = await createCourse(payload);
     return data;
@@ -237,6 +261,10 @@ const deleteCourseApi = async (id) => {
           updateCourseApi,
           deleteCourseApi,
           getAllLmsCoursesApi,
+          getLmsCategoriesApi,
+          searchLmsCoursesApi,
+          getLmsHomeApi,
+          createLmsCategoryApi,
         }}
       >
         {children}

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../../hooks/fetchUser";
 import Styles from "./_createCourse.module.css";
 
 const CourseDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+
   const { getCourseByIdApi } = useAuth();
 
   const [course, setCourse] = useState(null);
@@ -21,6 +23,11 @@ const CourseDetails = () => {
   if (!course) {
     return <h2>Loading...</h2>;
   }
+
+  // Go to CreateOrder page
+  const handleEnroll = () => {
+    navigate(`/orders/create/${course._id}`);
+  };
 
   return (
     <section className={Styles.detailsPage}>
@@ -52,6 +59,14 @@ const CourseDetails = () => {
             <strong>Tags:</strong>
             <span>{course.tags}</span>
           </div>
+
+          {/* Enroll Now Button */}
+          <button
+            className={Styles.enrollButton}
+            onClick={handleEnroll}
+          >
+            Enroll Now
+          </button>
         </div>
       </div>
 

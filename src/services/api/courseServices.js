@@ -40,3 +40,33 @@ export const fetchAllLmsCourses = async () => {
   let { data } = await api.get("/lms/courses");
   return data;
 };
+
+export const fetchLmsCategories = async () => {
+  const { data } = await api.get("/lms/categories");
+  return data;
+};
+
+export const searchLmsCourses = async (query) => {
+  const { data } = await api.get(`/lms/search?q=${query}`);
+  return data;
+};
+
+export const createLmsCategory = async (categoryData) => {
+  const { data } = await api.post("/lms/categories", categoryData);
+  return data;
+};
+
+export const createOrder = async (payload) => {
+  const { data } = await api.post("/order/create-order", payload);
+  return data;
+};
+
+export const getMyLearning = async () => {
+  const { data } = await api.get("/lms/my-learning");
+  return data;
+};
+
+export const fetchLmsHome = async () => {
+  const { data } = await api.get("/lms/home");
+  return data;
+};

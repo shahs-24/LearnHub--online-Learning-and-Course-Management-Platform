@@ -1,0 +1,77 @@
+
+.categoryPage {
+  width: 100%;
+  padding: 30px;
+}
+
+.header {
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #111827;
+}
+
+.header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.formCard {
+  max-width: 650px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #2563eb;
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.formCard button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.formCard button:hover {
+  background: #1d4ed8;
+}
+

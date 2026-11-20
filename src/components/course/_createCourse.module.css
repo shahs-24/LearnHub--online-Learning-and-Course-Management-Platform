@@ -520,4 +520,145 @@ font-size: 25px;
   transform: scale(0.97);
 }
 
+/* =========================
+   ENROLL BUTTON
+========================= */
+
+.enrollButton {
+  width: 100%;
+  border: none;
+  background: #6f42a5;
+  color: white;
+  padding: 13px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: 0.2s ease;
+}
+
+.enrollButton:hover {
+  background: #593487;
+  transform: translateY(-1px);
+}
+
+.enrollButton:active {
+  transform: scale(0.98);
+}
+
+.categorySection {
+  margin: 30px 0;
+}
+
+.categorySection h2 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+.categoryList {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.categoryCard {
+  min-width: 180px;
+  padding: 18px 22px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.categoryTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.categoryCount {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Search Box */
+
+.searchBox {
+  width: 100%;
+  max-width: 650px;
+  margin: 25px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchBox input {
+  flex: 1;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  background: #ffffff;
+}
+
+.searchBox input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.searchBox input::placeholder {
+  color: #9ca3af;
+}
+
+.searchButton {
+  height: 48px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.searchButton:hover {
+  background: #1d4ed8;
+}
+
+
+/* No Courses */
+
+.noCourses {
+  width: 100%;
+  padding: 50px 20px;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+.noCourses h2 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.noCourses p {
+  margin: 0;
+  color: #6b7280;
+}
+
 

@@ -37,10 +37,10 @@ const AdminSidebar = () => {
           </NavLink>
 
           <NavLink
-            to="/admin/admin-dashboard/orders"
-            className={Styles.sidebarLink}
+            to="/admin/admin-dashboard/categories"
+            className={Styles.courseButton}
           >
-            Orders
+            Manage Categories
           </NavLink>
 
           <NavLink

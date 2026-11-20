@@ -20,8 +20,10 @@ import UpdateCourse from "./components/course/UpdateCourse";
 import UpdateCourseList from "./components/course/UpdateCourseList";
 import CourseList from "./components/course/CourseList";
 import CourseDetails from "./components/course/CourseDetails";
-import Orders from "./components/Admin/Orders";
 import EnrolledCourses from "./components/Admin/EnrolledCourses";
+import CreateOrder from "./components/order/CreateOrder";
+import MyLearning from "./components/profile/MyLearning";
+import ManageCategories from "./components/Admin/ManageCategories";
 
 const App = () => {
   return (
@@ -46,6 +48,7 @@ const App = () => {
                 <Route element={<ProtectedRoute />}>
                   <Route path="/courses" element={<CourseList />} />
                   <Route path="/courses/:id" element={<CourseDetails />} />
+                  <Route path="/orders/create/:id" element={<CreateOrder />} />
                   <Route path="/user/profile" element={<ProfileDashboard />}>
                     <Route index element={<ProfileIndexPage />} />
                     <Route
@@ -56,6 +59,7 @@ const App = () => {
                       path="update-profile-picture"
                       element={<UpdataProfilePicture />}
                     />
+                    <Route path="my-learning" element={<MyLearning />} />
                   </Route>
                 </Route>
 
@@ -65,7 +69,11 @@ const App = () => {
                     path="admin/admin-dashboard"
                     element={<AdminDashboard />}
                   >
-                    <Route path="enrolled-courses" element={<EnrolledCourses />} />
+                    <Route
+                      path="enrolled-courses"
+                      element={<EnrolledCourses />}
+                    />
+                    <Route path="categories" element={<ManageCategories />} />
                     <Route index element={<GetAllUsers />} />
                     <Route path="user/:id" element={<SingleUser />} />
                     <Route path="course/create" element={<CreateCourse />} />
@@ -77,7 +85,6 @@ const App = () => {
                       path="course/update/:id"
                       element={<UpdateCourse />}
                     />
-                    <Route path="orders" element={<Orders />} />
                   </Route>
                 </Route>
               </Routes>
@@ -90,3 +97,5 @@ const App = () => {
 };
 
 export default App;
+
+
